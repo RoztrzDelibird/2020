@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>Druhý úkol &ndash; doplň výsledky:</p>
+  <p></p>
+  <p><img src="./m1.png"> <input type="number" style="position: relative;top: -8px;width:66px;"></p>
+  <p><img src="./m2.png"> <input type="number" style="position: relative;top: -8px;width:66px;"></p>
+  <p><img src="./m3.png"> <input type="number" style="position: relative;top: -13px;width:66px;"></p>
+  <p><img src="./m4.png"> <input type="number" style="position: relative;top: -22px;width:66px;"></p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("input[type=number]")].map(s => s.value).join(" ");
+
+      if (results === "-900 52 5 2") {
+        localStorage.setItem("solved1", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>

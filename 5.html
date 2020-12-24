@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>Pátý úkol &ndash; doplň slovesa v minulém čase (past simple):</p>
+  <p></p>
+  <p>I <input type="text" size="10"> to the cinema on Sunday. <em>(go)</em></p>
+  <p>My Mom <input type="text" size="10"> me a present. <em>(give)</em></p>
+  <p>We <input type="text" size="10"> songs at school on Tuesday. <em>(sing)</em></p>
+  <p>My friend Harry <input type="text" size="10"> me an hour ago. <em>(call)</em></p>
+  <p>I <input type="text" size="10"> chicken for lunch. <em>(have)</em></p>
+  <p>Tom <input type="text" size="10"> an interesting book. <em>(read)</em></p>
+  <p>I <input type="text" size="10"> my friends on Thursday. They're fine. <em>(see)</em></p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("input[type=text]")].map(s => s.value.trim()).join(" ");
+
+      if (results.toLowerCase() === "went gave sang called had read saw") {
+        localStorage.setItem("solved4", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>

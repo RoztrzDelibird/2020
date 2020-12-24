@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>Šestý úkol &ndash; doplň jména Pokémonů:</p>
+  <p></p>
+  <p><img src="./p1.png"> <input type="text"></p>
+  <p><img src="./p2.png"> <input type="text"></p>
+  <p><img src="./p3.png"> <input type="text"></p>
+  <p><img src="./p4.png"> <input type="text"></p>
+  <p><img src="./p5.png"> <input type="text"></p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("input[type=text]")].map(s => s.value.trim()).join(" ");
+
+      if (results.toLowerCase() === "slugma pachirisu duosion goomy cursola") {
+        localStorage.setItem("solved5", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>

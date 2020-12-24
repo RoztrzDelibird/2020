@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>Čtvrtý úkol &ndash; doplň chemické značky:</p>
+  <p></p>
+  <p>kyslík <input type="text" size="3"></p>
+  <p>xenon <input type="text" size="3"></p>
+  <p>draslík <input type="text" size="3"></p>
+  <p>stříbro <input type="text" size="3"></p>
+  <p>uran <input type="text" size="3"></p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("input[type=text]")].map(s => s.value.trim()).join(" ");
+
+      if (results === "O Xe K Ag U") {
+        localStorage.setItem("solved3", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>

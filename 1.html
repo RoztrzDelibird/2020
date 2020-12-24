@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>První úkol &ndash; doplň i/y:</p>
+  <p></p>
+  <p>Josef Kainar se přestěhoval k otc<select><option></option><option>i</option><option>y</option></select> do Řepiště u Ostrav<select><option></option><option>i</option><option>y</option></select>, kde pracoval zpočátku na p<select><option></option><option>i</option><option>y</option></select>le. Ve čtyřicátých letech se sbírkou Nové M<select><option></option><option>í</option><option>ý</option></select>t<select><option></option><option>i</option><option>y</option></select> zařadil k halasovské generac<select><option></option><option>i</option><option>y</option></select>, kterou tvořil<select><option></option><option>i</option><option>y</option></select> spisovatelé jako Jiří Kolář či Josef Hiršal. V roce 1949 vys<select><option></option><option>i</option><option>y</option></select>pal z rukávu dílo Ubu se vrací. Ke Kainarov<select><option></option><option>í</option><option>ý</option></select>m nejslavnějším básním patří dodnes „Stříhal<select><option></option><option>i</option><option>y</option></select> dohola malého chlapečka“.</p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("select")].map(s => s.value).join("");
+
+      if (results === "iyiýyiiyýi") {
+        localStorage.setItem("solved0", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>

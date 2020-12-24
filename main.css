@@ -1,0 +1,35 @@
+@font-face {
+  font-family: SystemDefaultFont;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"),
+    local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"),
+    local("Ubuntu Light"),
+    local("Segoe UI Light"),
+    local("Roboto-Light"),
+    local("DroidSans"),
+    local("Tahoma");
+}
+
+body {
+  font-family: SystemDefaultFont, sans-serif;
+}
+
+img.max {
+  max-width: 100%;
+  display: block;
+  margin: 1em auto;
+}
+
+ol li, ol li span, .last {
+  display: none;
+}
+
+ol li.solved span {
+  display: inline;
+}
+
+ol li.shown {
+  display: list-item;
+}

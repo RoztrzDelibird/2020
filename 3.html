@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Úkol Nevlídného Mr. Rima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <p>Třetí úkol &ndash; doplň přezdívky vlaků:</p>
+  <p></p>
+  <p><img src="./l1.jpg"> <select><option></option><option>Brejlovec</option><option>Bardotka</option><option>Špageta</option><option>Žabička</option></select></p>
+  <p><img src="./l2.jpg"> <select><option></option><option>Mandelinka</option><option>Šukafon</option><option>Orchestrion</option><option>RegioMouse</option></select></p>
+  <p><img src="./l3.jpg"> <select><option></option><option>RegioElefant</option><option>Ešus</option><option>Prdeláč</option><option>Kraken</option></select></p>
+  <p><img src="./l4.jpg"> <select><option></option><option>Traktor</option><option>Panťák</option><option>Batoh</option><option>Žehlička</option></select></p>
+  <p><input type="button" value="Zkontrolovat"></p>
+  <script type="text/javascript">
+    document.querySelector("input[type=button]").addEventListener("click", () => {
+      let results = [...document.querySelectorAll("select")].map(s => s.value).join(" ");
+
+      if (results === "Bardotka Mandelinka Ešus Žehlička") {
+        localStorage.setItem("solved2", "YES");
+        alert("Ano, to je správně :) Můžeš jít zpět a splnit další úkol.");
+      } else {
+        alert("To je bohužel špatně :(");
+      }
+    });
+  </script>
+</body>
+</html>
